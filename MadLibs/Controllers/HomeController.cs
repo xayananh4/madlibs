@@ -7,11 +7,12 @@ namespace MadLibs.Controllers
   {
 
     [Route("/")]
-
+    public ActionResult index() { return View(); }
+    
     [Route("/form")]
-    public ActionResult Form() { return View(); }
+    public ActionResult Form1() { return View(); }
 
-    [Route("/postcard")]
+    [Route("/results")]
     public ActionResult MadLibsResult(string name1, string name2, string place, string plural1, string plural2, string adjective1, string vehicle, string noun1, string occupation, string fname, string adjective2, string noun2)
     {
       MadLibsVariable myMadLibsVariable = new MadLibsVariable();
